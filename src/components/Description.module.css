@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    width: 100%;
+    color-scheme: light dark;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #f5f3f3;
+}
+
+.descr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descr h1 {
+    align-items: center;
+    color: #431010;
+    font-size: 56px;
+    margin-bottom: 18px;
+}
+
+.descr p {
+    font-size: 20px;
+    margin-top: 0;
+    font-style: italic;
+    margin-bottom: 26px;
+}

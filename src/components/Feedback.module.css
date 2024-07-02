@@ -1,0 +1,9 @@
+.feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 18px;
+}
