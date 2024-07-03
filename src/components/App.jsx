@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Description from './Description'
 import Options from './Options'
 import Feedback from './Feedback'
@@ -22,6 +22,17 @@ function App() {
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
 
   const positiveFeedbackPercentage = totalFeedback ? Math.round((feedback.good / totalFeedback) * 100) : 0;
+
+  useEffect(() => {
+    const savedFeedback = JSON.parse(localStorage.getItem('feedback'));
+    if (savedFeedback) {
+      setFeedback(savedFeedback);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('feedback', JSON.stringify(feedback));
+  }, [feedback]);
 
   return (
     <>
